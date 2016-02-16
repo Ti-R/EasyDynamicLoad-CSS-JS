@@ -19,7 +19,7 @@ There is 1 demos inside demos directory
 - Html:
 You just need to include the file.
 ```html
-<script language="JavaScript" src="tr.dynamic_load_css_js.min.js"></script>
+<script language="JavaScript" src="tr.easydynamic_load_css_js.min.js"></script>
 ```
 
 
