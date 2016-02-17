@@ -12,6 +12,8 @@ You can test it on my website.
 There is 1 demos inside demos directory
 - demo-basic.html:
 	* It show how to use it with a very basic sample.
+- demo-percentage.html:
+	* It show how to use it and get percentage informations.
 
 
 
@@ -59,6 +61,9 @@ I needed to load easily js and css and get a callback in the end, I just create 
 
 
 # Changelog
+ - Version 1.1.0
+	* Added percentage information.
+
  - Version 1.0.0
 	* Release
 	

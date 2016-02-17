@@ -43,15 +43,21 @@ TR.LoadCSS = function( _file, _callback )
 
 
 // Load JS and CSS
-TR.LoadJSAndCSS = function(_listJStoLoad, _listCSStoLoad, _callBackWhenDone)
+TR.LoadJSAndCSS = function(_listJStoLoad, _listCSStoLoad, _callBackWhenDone, _callBackPercent)
 {
-	var tNbScriptToLoad = _listJStoLoad?_listJStoLoad.length:0;
-	tNbScriptToLoad += _listCSStoLoad?_listCSStoLoad.length:0;	
+	var tNbScriptToLoadTotal = _listJStoLoad?_listJStoLoad.length:0;
+	tNbScriptToLoadTotal	+= _listCSStoLoad?_listCSStoLoad.length:0;	
+	var tNbScriptToLoad = tNbScriptToLoadTotal;
 	
 	// Count loaded script before to load the background image resource
 	function CountLoadedScript()
 	{
 		--tNbScriptToLoad;
+		
+		if( _callBackPercent )
+		{
+			_callBackPercent( (((tNbScriptToLoadTotal-tNbScriptToLoad)/tNbScriptToLoadTotal)*100).toFixed(1) );
+		}
 		if( tNbScriptToLoad != 0)
 			return;
 		
