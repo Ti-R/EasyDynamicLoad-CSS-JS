@@ -7,7 +7,7 @@ Small script to easily load multiple CSS and JS with a callback when all is done
 
 # Demo
 You can test it on my website.
-[www.ti-r.com (EasyDynamicLoadingOfCSSAndJS)](http://home/www.ti-r.com_2015/?js/Web/EasyDynamicLoadingOfCSSAndJS)
+[www.ti-r.com (EasyDynamicLoadingOfCSSAndJS)](http://www.ti-r.com/?js/Web/EasyDynamicLoadingOfCSSAndJS)
 
 There is 1 demos inside demos directory
 - demo-basic.html:
