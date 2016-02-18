@@ -1,6 +1,6 @@
 // Author: Ti-R (Renan Lavarec)
 // License: MIT
-// Version: 1.0.0
+// Version: 1.1.1
 
 // Namespace TR
 if( !TR )
@@ -9,8 +9,6 @@ if( !TR )
 // Load JS
 TR.LoadJS = function( _file, _callback )
 {
-	_callback = undefined || _callback;
-	
 	// Check element exist
 	var tFirstElement = TR.CSSOrJSCheckElementExist('script', 'src', _file, _callback)
 	if( !tFirstElement ) // Element exist, return
@@ -26,8 +24,6 @@ TR.LoadJS = function( _file, _callback )
 // Load CSS
 TR.LoadCSS = function( _file, _callback )
 {
-	_callback = undefined || _callback;
-	
 	// Check element exist
 	var tFirstElement = TR.CSSOrJSCheckElementExist('link', 'href', _file, _callback)
 	if( !tFirstElement ) // Element exist, return
@@ -86,12 +82,6 @@ TR.LoadJSAndCSS = function(_listJStoLoad, _listCSStoLoad, _callBackWhenDone, _ca
 
 // Utils functions
 
-// Give an error
-TR.ErrorLoadingFile = function( _file )
-{
-	console.log("ERROR: File not loaded: " + _file);
-}
-
 // Check element already loaded
 TR.CSSOrJSCheckElementExist = function(_name, _attr, _file, _callback)
 {
@@ -124,7 +114,7 @@ TR.CSSOrJSCreateElement = function(_name, _type, _file, _callback)
 		
 	function LocalErrorLoadingFile( _error )
 	{
-		TR.ErrorLoadingFile(_file);
+		console.log("ERROR: File not loaded: " + _file);
 	}
 	tElement.onerror = LocalErrorLoadingFile;
 	return tElement;

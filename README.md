@@ -3,7 +3,7 @@ Small script to easily load multiple CSS and JS with a callback when all is done
  
 # Dependencies
  - No dependency
-
+ 
 
 # Demo
 You can test it on my website.
@@ -36,8 +36,12 @@ var tListCSStoLoad = [ 'link1.css', 'link2.css' ];
 
 function CallBackWhenDone()
 {}
+
+function CallBackPercentage( _percentage )
+{}
+
 // tListJStoLoad or tListCSStoLoad can be undefined
-TR.LoadJSAndCSS(tListJStoLoad, tListCSStoLoad, CallBackWhenDone);
+TR.LoadJSAndCSS(tListJStoLoad, tListCSStoLoad, CallBackWhenDone, CallBackPercentage);
 ```
 
   * LoadJS: to load a single js dynamically
@@ -61,6 +65,10 @@ I needed to load easily js and css and get a callback in the end, I just create 
 
 
 # Changelog
+
+ - Version 1.1.1
+	* Remove default variables.
+
  - Version 1.1.0
 	* Added percentage information.
 
